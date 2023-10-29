@@ -110,9 +110,12 @@
         #2 & #4 \\
     \end{tabular*}
     
-    \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1em]
-        #5
-    \end{itemize}
+    \ifx*#5* % Check if #5 is empty
+    \else
+        \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1em]
+            #5
+        \end{itemize}
+    \fi
 }
 
 \newcommand{\Project}[4]{
@@ -137,7 +140,7 @@
         \textbf{#1}  & \textit{#3} \\
         #2 & #4 \\
     \end{tabular*}
-    \ifx&#5& % Check if #5 is empty
+    \ifx*#5* % Check if #5 is empty
     \else
         \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1em]
             #5
