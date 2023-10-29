@@ -21,8 +21,8 @@ cd Downloads/GenResume; go run *.go sample.json
 ```
 If you want to edit the format, go to `template.tex` and `resume_config.cls`, like how you edit LaTeX. Please leave a comment (or find ChatGPT for assistance) if you have any difficulties formatting the template. 
 
-License
+## License
 MIT
 
-Credits
+## Credits
 I made this alone (with the help of ChatGPT). 
