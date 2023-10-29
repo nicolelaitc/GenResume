@@ -1,0 +1,121 @@
+\documentclass[letterpaper]{resume_config}
+
+\begin{document}
+[[ if .Header ]]
+\Header
+    [[ if .Header.Name ]]{[[ .Header.Name ]]}[[ end ]]
+    [[ if .Header.City ]]{[[ .Header.City ]],  [[ .Header.Province ]]}[[ end ]]
+    [[ if .Header.Phone ]]{[[ .Header.Phone ]]}[[ end ]]
+    [[ if .Header.Email ]]{[[ .Header.Email ]]}[[ end ]]
+    [[ if .Header.Linkedin ]]{[[ .Header.Linkedin ]]}[[ end ]]
+    [[ if .Header.Github ]]{[[ .Header.Github ]]}[[ end ]]
+    [[ if .Header.Website ]][{[[ .Header.Website ]]}][[ end ]]
+[[ end ]]
+
+[[ if .Summary ]]
+\section{Professional Summary}
+    {[[ .Summary ]]}
+[[ end ]]
+
+
+[[ if .WorkExperiences ]]
+\section{Professional Experience}
+[[ range .WorkExperiences ]]
+\WorkExperience
+    {[[ .Position ]]}
+    {[[ .Company ]]}
+    {[[ .Start ]] -- [[ .End ]]}
+    {[[ .City ]], [[ .Province ]]}
+    {
+        [[if .Description ]]
+        [[ range .Description ]]
+            \item [[ . ]]
+        [[ end ]]
+        }
+[[ end ]]
+\vspace{5pt}
+
+[[ end ]]
+[[ end ]]
+
+[[ if .AdditionalExperiences ]]
+\section{Additional Experience}
+[[ range .AdditionalExperiences ]]
+\WorkExperience
+    {[[ .Position ]]}
+    {[[ .Company ]]}
+    {[[ .Start ]] -- [[ .End ]]}
+    {[[ .City ]], [[ .Province ]]}
+    {
+        [[if .Description ]]
+        [[ range .Description ]]
+            \item [[ . ]]
+        [[ end ]]
+        }
+[[ end ]]
+\vspace{5pt}
+
+[[ end ]]
+[[ end ]]
+
+[[ if .Education ]]
+\section{Education}
+[[ range .Education ]]
+\EducationExperience
+    {[[ .Institution ]]}
+    {[[ .Degree ]]}
+    [[ if or .Start .End ]]{[[ if .Start ]][[ .Start ]][[ end ]][[ if and .Start .End ]] -- [[ end ]][[ if .End ]][[ .End ]][[ end ]]}[[ else ]]{}[[ end ]]
+    {[[ .City ]], [[ .Province ]]}
+    [[if .Description ]]{[[ range .Description ]]\item [[ . ]][[ end ]]}[[ else ]]{}[[ end ]]
+\vspace{5pt}
+[[ end ]]
+[[ end ]]
+
+
+[[ if .Projects ]]
+\section{Projects}
+[[ range .Projects ]]
+\Project
+    {[[ .Name ]]}
+    {[[ range $index, $tech := .Technologies ]][[ if $index ]], [[ end ]][[ $tech ]][[ end ]]}
+    [[ if .Link]]{[[ .Link ]]}[[ end ]]
+    {
+        [[if .Description ]]
+        [[ range .Description ]]
+            \item [[ . ]]
+        [[ end ]]
+        }
+[[ end ]]
+\vspace{5pt}
+
+[[ end ]]
+[[ end ]]
+
+
+
+[[ if .Certifications ]]
+\section{Certifications}
+[[ range .Certifications ]]
+\Certification
+    {[[ .Name ]]}
+    {[[ .Institution ]]}
+    {[[ .Date ]]}
+[[ end ]]
+[[ end ]]
+
+
+
+[[ if .Skills ]]
+\section{Skills}
+\SkillList{
+[[ range .Skills ]]
+\SkillItem
+    {[[ .Category ]]}
+    {[[ range $index, $skill := .Skill ]][[ if $index ]], [[ end ]][[ $skill ]][[ end ]]}
+[[ end ]]
+}
+[[ end ]]
+
+
+
+\end{document}

@@ -1,0 +1,13 @@
+{
+    "Header": {
+      "Name": "John Doe",
+      "City": "Springfield",
+      "Province": "IL",
+      "Email": "john.doe@example.com",
+      "Linkedin": "linkedin.com/in/johndoe",
+      "Github": "github.com/johndoe",
+      "Phone": "123-456-7890",
+      "Website": "johndoe.com"
+    }
+}
+  
