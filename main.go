@@ -3,12 +3,17 @@ package main
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
 	"os/exec"
 	"text/template"
+	"time"
 )
+
+var filename = fmt.Sprintf("resume_%v", time.Now().Unix())
+var templatefilename = fmt.Sprintf("%s.tex", filename)
 
 func main() {
 
@@ -24,6 +29,8 @@ func main() {
 	if err != nil {
 		log.Fatal("Failed to generate PDF:", err)
 	}
+
+	removeLaTeXFiles()
 
 }
 
@@ -81,7 +88,7 @@ func generateLaTeX(resume Resume) {
 
 	// Your code to execute the template will go here
 	// Open a new LaTeX file
-	newFile, err := os.Create("resume.tex")
+	newFile, err := os.Create(templatefilename)
 	if err != nil {
 		panic(err)
 	}
@@ -96,10 +103,25 @@ func generateLaTeX(resume Resume) {
 
 // Add this function to your code
 func runPdflatex() error {
-	cmd := exec.Command("xelatex", "resume.tex")
+	cmd := exec.Command("xelatex", templatefilename)
 	err := cmd.Run()
 	if err != nil {
 		return err
 	}
 	return nil
+}
+
+func removeLaTeXFiles() {
+	extensions := []string{".aux", ".tex", ".out", ".log"}
+
+	for _, ext := range extensions {
+		filename := filename + ext
+		err := os.Remove(filename)
+		if err != nil {
+			fmt.Printf("Error removing %s: %s\n", filename, err)
+			return
+		} else {
+			fmt.Printf("Successfully removed %s\n", filename)
+		}
+	}
 }

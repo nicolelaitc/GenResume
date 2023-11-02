@@ -2,43 +2,53 @@
     "Summary": "A highly motivated software engineer with experience in various technologies.",
     "Education": [
         {
-            "Institution": "Springfield University",
-            "Degree": "B.S. in Computer Science",
+            "Institution": "University of XYZ",
+            "Degree": "Bachelor of Science in Computer Science",
             "Start": "2015",
             "End": "2019",
-            "City": "Springfield",
-            "Province": "IL",
+            "City": "Los Angeles",
+            "Province": "CA",
             "Description": [
                 "Graduated with honors",
-                "Relevant coursework in algorithms and data structures"
+                "GPA: 3.8"
+            ]
+        },
+        {
+            "Institution": "ABC Technical Institute",
+            "Degree": "Master's in Software Engineering",
+            "Start": "2020",
+            "End": "2022",
+            "City": "San Francisco",
+            "Province": "CA",
+            "Description": [
+                "Thesis: Machine Learning in Healthcare",
+                "GPA: 4.0"
             ]
         }
     ],
     "WorkExperiences": [
         {
-            "Company": "TechCorp",
-            "Position": "Software Engineer",
+            "Company": "TechCorp Inc.",
+            "Position": "Senior Software Engineer",
             "Start": "2019",
-            "End": "Present",
-            "City": "Springfield",
-            "Province": "IL",
+            "End": "2022",
+            "City": "San Jose",
+            "Province": "CA",
             "Description": [
-                "Developed web applications",
-                "Collaborated in agile teams"
+                "Led a team of 5 engineers",
+                "Developed innovative software solutions"
             ]
-        }
-    ],
-    "AdditionalExperiences": [
+        },
         {
-            "Company": "Freelance",
-            "Position": "Web Developer",
+            "Company": "CodeMaster Ltd.",
+            "Position": "Software Developer",
             "Start": "2017",
             "End": "2019",
-            "City": "Springfield",
-            "Province": "IL",
+            "City": "Seattle",
+            "Province": "WA",
             "Description": [
-                "Built websites for local businesses",
-                "Worked with various clients"
+                "Contributed to open-source projects",
+                "Implemented new features"
             ]
         }
     ],
@@ -46,29 +56,57 @@
         {
             "Category": "Programming Languages",
             "Skill": [
-                "Go",
+                "Java",
                 "Python",
-                "JavaScript"
+                "C++"
+            ]
+        },
+        {
+            "Category": "Web Development",
+            "Skill": [
+                "HTML/CSS",
+                "JavaScript",
+                "React"
             ]
         }
     ],
     "Projects": [
         {
-            "Name": "My Awesome Project",
+            "Name": "E-commerce Website",
             "Description": [
-                "An awesome project that does awesome things"
+                "Designed and developed a full-stack e-commerce website",
+                "Integrated payment gateway"
             ],
-            "Link": "github.com/johndoe/awesome-project",
+            "Link": "example.com/e-commerce",
             "Technologies": [
-                "Go",
-                "React"
+                "Node.js",
+                "React",
+                "MongoDB"
+            ]
+        },
+        {
+            "Name": "Machine Learning Model",
+            "Description": [
+                "Built and trained a machine learning model for image classification",
+                "Achieved 95% accuracy"
+            ],
+            "Link": "github.com/johndoe/ml-model",
+            "Technologies": [
+                "Python",
+                "TensorFlow",
+                "Keras"
             ]
         }
     ],
     "Certifications": [
         {
-            "Name": "Certified Go Developer",
-            "Institution": "Go Institute",
+            "Name": "Certified Java Developer",
+            "Institution": "Java Certification Institute",
+            "Date": "2021"
+        },
+        {
+            "Name": "AWS Certified Solutions Architect",
+            "Institution": "Amazon Web Services",
             "Date": "2020"
         }
     ]
