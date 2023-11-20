@@ -6,7 +6,7 @@ Let Latex take care of the formatting of your resume, and you just have to deal 
 ## Warnings
 1. If you intend to tailor your resume with the help of AI tools, please only send the information listed in `sample.json` to avoid privacy issues. 
 2. If you find the resume format of [ResuMake](https://resumake.io/) is good enough for you, you probably should use it instead.
-3. The program (currently) cannot deal with `%` properly. Please replace all `%` characters with `//%`.
+3. The program (currently) cannot deal with `%` and `&` properly. Please replace all `%`/`&` characters with `//%`/`//&`.
 4. Further customization requires LaTeX knowledge.
 
 ## Usage
